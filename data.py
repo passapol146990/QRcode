@@ -8,13 +8,14 @@ to_waring = Element('to_waring1')
 
 def get_link(*args,**kwargs):
     if text.element.value != '':
-        url = "https://chart.googleapis.com/chart?chs=400x400&cht=qr&choe=UTF-8&chl=" + str(text.element.value)
+        url = "https://chart.googleapis.com/chart?chs=200x200&cht=qr&choe=UTF-8&chl=" + str(text.element.value)
         a = '<a href="' + url + '" target="_blank">TO QR Code</a>'
-        b = '<img src="' + url + '" >'
+        b = '<img class="mt-3 mb-3" src="' + url + '" >'
+        to_waring.clear()
         to_img.element.innerHTML = b
     else:
         c = 'กรุณาใส่ตัวหนังสือหรือลิ้งก์ในช่องว่างก่อน!'
-        c = '<p class="danger">'+c+'</p>'
+        c = '<p class="text-danger">'+c+'</p>'
         to_waring.element.innerHTML = c
 
 
