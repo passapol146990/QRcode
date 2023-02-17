@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css"/>
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateEZQR</title>
+</head>
+<body>
+    <div class="p-5 card">
+        <form onsubmit="return false" class="card-body">
+            <label class="form-lable h3" for="name">Enter You text : </label>
+            <input placeholder="ใส่ลิ้งก์หรือตัวหนังสือ" class="form-control" type="text" id="text1">
+            <button class="btn btn-outline-success mt-3" id="ok" type="button" py-click="get_link()">To QR code</button>
+            <button class="btn btn-outline-danger mt-3" id="clear" type="button" py-click="clear()">ล้าง</button>
+        </form>
+        <div id="to_waring1"></div>
+    </div>
+
+    <div id="to_link1"></div>
+    <div id="to_img1"></div>
+
+    <py-script src="./data.py"></py-script>
+</body>
+</html>
