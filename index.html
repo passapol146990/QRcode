@@ -29,7 +29,7 @@
         const btn = document.getElementById("btn");
         const QR = document.getElementById("QR");
         btn.addEventListener("click",()=>{
-            url = `https://api.qrserver.com/v1/create-qr-code/?data=${input.value}&size=400x400`
+            url = `https://api.qrserver.com/v1/create-qr-code/?data=${input.value}&size=150x150`
             QR.innerHTML = (input.value.length <1) ? '<h2 class="text-white">!กรุณาใส่ข้อความเพื่อสร้าง QRcoed</h2>':`<img class="p-2 shadow" src="${url}" id="qrcode">`
         });
     </script>
